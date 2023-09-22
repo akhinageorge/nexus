@@ -1,2 +1,2 @@
 # nexus
-A smart traffic managaement system 
+A smart traffic management system 
