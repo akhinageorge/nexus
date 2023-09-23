@@ -1,20 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimalist Navigation Form</title>
-    <link rel="stylesheet" type="text/css" href="commute.css">
+    <title>Nexus</title>
+    <link rel="stylesheet" type="text/css" href="../static/commute.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
-    
+
 </head>
+
 <body>
     <div class="navbar">
 
-        <div class="logo"> 
-            <img src="image_1-removebg-preview.png" alt="nexus" width="40" height="40">
+        <div class="logo">
+            <img src="../static/assets/image_1-removebg-preview.png" alt="nexus" width="40" height="40">
             <p class="logoname">nexus</p>
-        </div> 
+        </div>
 
         <ul class="navbar">
             <li><a href="#">Next Commute</a></li>
@@ -26,7 +28,7 @@
 
     <div class="maincontentcommute">
         <div class="journeyguy">
-            <img src="Journey-amico.png" alt="journeyguy">
+            <img src="../static/assets/Journey-amico.png" alt="journeyguy">
         </div>
 
         <div class="dateandtime">
@@ -39,7 +41,7 @@
         <div class="container">
             <h2>Find your next commute</h2>
 
-            <form class="navigation-form">
+            <form class="navigation-form" method="post">
                 <div class="form-group">
                     <label for="source"></label>
                     <input type="text" id="source" name="source" placeholder="Source" required>
@@ -70,16 +72,16 @@
             const timeString = `${hours}:${minutes}:${seconds}`;
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
             const dateString = now.toLocaleDateString('en-US', options);
-            
+
             timeElement.textContent = timeString;
             dateElement.textContent = dateString;
         }
-        
+
         // Update the clock immediately and then every second
-    updateClock();
-    setInterval(updateClock, 1000);
+        updateClock();
+        setInterval(updateClock, 1000);
     </script>
-    
+
 </body>
 
 <footer>

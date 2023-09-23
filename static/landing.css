@@ -1,165 +1,168 @@
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 20px;
-    color: #D9D9D9;
+  margin: 0;
+  padding: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 20px;
+  color: #d9d9d9;
 }
 
 .navbar {
-    list-style-type:none;
-    margin: auto;
-    padding: 50;
-    text-align: center;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+  list-style-type: none;
+  margin: auto;
+  padding: 50;
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .navbar li {
-    display: inline;
-    font-size:large;
-    font-family: 'Nunito Sans', sans-serif;
-    font-weight: 800;
-    margin-right: 30px;
+  display: inline;
+  font-size: large;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 800;
+  margin-right: 30px;
 }
 
 .navbar a {
-    text-decoration: none; 
-    color: #C05299;
-    transition: color 0.3s; 
+  text-decoration: none;
+  color: #c05299;
+  transition: color 0.3s;
 }
 
 .navbar a:hover {
-    color: #C05299; 
+  color: #c05299;
 }
 
 .logo {
-    display: flex;
-    align-items: center;
-    margin-left: 2%;
+  display: flex;
+  align-items: center;
+  margin-left: 2%;
 }
 
-.logoname{
-    margin: 10px;
-    padding:5px;
-    color:#822FAF; 
-    font-weight: 800; 
-    font-size:xx-large;
+.logoname {
+  margin: 10px;
+  padding: 5px;
+  color: #822faf;
+  font-weight: 800;
+  font-size: xx-large;
 }
 
-.h1{
-    color: #822FAF;
-    font-family: Nunito Sans;
-    font-size: 2.5rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
-    margin: 0%;
+.h1 {
+  color: #822faf;
+  font-family: Nunito Sans;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0%;
 }
 
-.h2{
-    color: #822FAF;
-    font-family: Nunito Sans;
-    font-size: 3rem;
-    font-style: normal;
-    font-weight: 800;
-    margin: 0%;
-    margin-top: 10px;
-    margin-bottom: 10px;
+.h2 {
+  color: #822faf;
+  font-family: Nunito Sans;
+  font-size: 3rem;
+  font-style: normal;
+  font-weight: 800;
+  margin: 0%;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-.maintext{
-    color: #47126B;
-    font-family: Nunito Sans;
-    font-size: 1.375rem;
-    font-style: normal;
-    font-weight: 600;
-    max-width: 70%;
-    margin: 0%;
+.maintext {
+  color: #47126b;
+  font-family: Nunito Sans;
+  font-size: 1.375rem;
+  font-style: normal;
+  font-weight: 600;
+  max-width: 70%;
+  margin: 0%;
 }
 
-.mainimage{
-    flex-shrink: 0;
-    display: flex;
-    flex-direction: row-reverse;
-    justify-items:center;
-    align-items:center;
-    width:95%;
-    margin-left: auto;
+.mainimage {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-items: center;
+  align-items: center;
+  width: 95%;
+  margin-left: auto;
 }
 
-.mainareatext{
-    max-width: 70%;
-    margin-left: 5%;
+.mainareatext {
+  max-width: 70%;
+  margin-left: 5%;
 }
 
 .container {
-    display: flex;
-    align-items:center;
-    margin:0%;
-    margin-top: 5%;
+  display: flex;
+  align-items: center;
+  margin: 0%;
+  margin-top: 5%;
 }
 
 .button {
-    width: 10.0625rem;
-    height: 2.5rem;
-    flex-shrink: 0;
-    border-radius: 1.875rem;
-    background: #C05299;
-    text-align: center;
-    line-height: 2.5rem;
-    color: #D9D9D9;
-    text-decoration: none;
-    margin: 0 10px;
-    cursor: pointer;
+  width: 10.0625rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 1.875rem;
+  background: #c05299;
+  text-align: center;
+  line-height: 2.5rem;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+  cursor: pointer;
 }
 
 .button:hover {
-    background: #A94284; 
+  background: #a94284;
 }
 
 .featuresarea {
-    background-image: url('Vector.png');
-    background-size: 60%; 
-    background-position: center;
-    background-repeat: no-repeat;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  background-image: url("../static/assets/Vector.png");
+  background-size: 60%;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
 }
 
-.commutetext{
-    color: #822FAF;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    font-family: Nunito Sans;
-    font-size: 28px;
-    font-weight: 700;
+.commutetext {
+  color: #822faf;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Nunito Sans;
+  font-size: 28px;
+  font-weight: 700;
 }
 
-.commute{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.commute {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.flagandjourney{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-top: 20px;
+.flagandjourney {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 20px;
 }
 
 .commutetext a {
-    text-decoration: none; 
-    transition: color 0.3s; 
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .commutetext a:hover {
-    color: #C05299; 
+  color: #c05299;
 }
 
 footer {
-    background-color:#822FAF ;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
+  background-color: #822faf;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
 }

@@ -1,18 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="signin.css">
+    <title>Nexus</title>
+    <link rel="stylesheet" type="text/css" href="../static/signin.css">
     <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
 </head>
+
 <body>
     <div class="navbar">
 
-        <div class="logo"> 
-            <img src="image_1-removebg-preview.png" alt="nexus" width="40" height="40">
+        <div class="logo">
+            <img src="../static/assets/image_1-removebg-preview.png" alt="nexus" width="40" height="40">
             <p class="logoname">nexus</p>
-        </div> 
+        </div>
 
         <ul class="navbar">
             <li><a href="#">Next Commute</a></li>
@@ -25,40 +28,41 @@
     <div class="maincontent">
 
         <div class="signinform">
-            <form class="login-form">
+            <form class="login-form" method="post">
                 <div class="input-group">
                     <label for="username" class="icon-label">
-                        <img src="🦆 icon _profile circle_.png" alt="User Icon" class="icon">
+                        <img src="../static/assets/🦆 icon _profile circle_.png" alt="User Icon" class="icon">
                     </label>
                     <input type="text" id="username" name="username" placeholder="Username" required>
                 </div>
                 <div class="input-group">
                     <label for="password" class="icon-label">
-                        <img src="🦆 icon _tick circle_.png" alt="Password Icon" class="icon">
+                        <img src="../static/assets/🦆 icon _tick circle_.png" alt="Password Icon" class="icon">
                     </label>
                     <input type="password" id="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="input-group">
                     <label for="confirmpassword" class="icon-label">
-                        <img src="🦆 icon _tick circle_solid.png" alt="Password Icon" class="icon">
+                        <img src="../static/assets/🦆 icon _tick circle_solid.png" alt="Password Icon" class="icon">
                     </label>
-                    <input type="confirmpassword" id="confirmpassword" name="confirmpassword" placeholder="Confirm Password" required>
+                    <input type="confirmpassword" id="confirmpassword" name="confirmpassword"
+                        placeholder="Confirm Password" required>
                 </div>
                 <button type="submit">Sign Up</button>
             </form>
         </div>
 
-        <div class="logo1"> 
-            <img src="image_1-removebg-preview.png" alt="nexus" width="150px" height="150px">
+        <div class="logo1">
+            <img src="../static/assets/image_1-removebg-preview.png" alt="nexus" width="150px" height="150px">
             <p class="logoname1">nexus</p>
         </div>
 
         <div class="signupguy">
-            <img src="Mobile login-bro.png" alt="loginguy">
+            <img src="../static/assets/Mobile login-bro.png" alt="loginguy">
         </div>
 
     </div>
-   
+
 </body>
 
 <footer>
