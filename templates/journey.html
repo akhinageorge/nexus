@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenStreetMap UI</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="journey.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'> 
+</head>
+<body>
+    <div class="navbar">
+
+        <div class="logo"> 
+            <img src="image_1-removebg-preview.png" alt="nexus" width="40" height="40">
+            <p class="logoname">nexus</p>
+        </div> 
+
+        <ul class="navbar">
+            <li><a href="#">Next Commute</a></li>
+            <li><a href="#">Flag an Issue</a></li>
+            <li><a href="#">Plan a Journey</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script>
+        // Create a map instance and set the initial view
+        var map = L.map('map').setView([51.505, -0.09], 13);
+
+        // Add OpenStreetMap tiles to the map
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+
+        // Create a marker and add it to the map
+        var marker = L.marker([51.5, -0.09]).addTo(map);
+
+        // Add a popup to the marker
+        marker.bindPopup("<b>Hello!</b><br>This is an OpenStreetMap marker.").openPopup();
+    </script>
+</body>
+<footer>
+    <p>&copy; .hack();-2023 Team Nexus. All rights reserved.</p>
+    <p>Contact: teamnexus@gmail.com</p>
+</footer>
+</html>
