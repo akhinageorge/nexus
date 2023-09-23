@@ -28,10 +28,6 @@ function success(pos){
         map.fitBounds(circle.getBounds());
     }
     map.setView([lat,lng]);
-    var popup = L.popup()
-    .setLatLng([lat,lng])
-    .setContent("I am a standalone popup.")
-    .openOn(map);
 
 }
 
