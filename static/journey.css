@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: #D9D9D9;
+}
+
+.navbar {
+    list-style-type:none;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline;
+    font-size:large;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    margin-right: 30px;
+}
+
+.navbar a {
+    text-decoration: none; 
+    color: #C05299;
+    transition: color 0.3s; 
+}
+
+.navbar a:hover {
+    color: #C05299; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.logoname{
+    margin: 10px;
+    padding:5px;
+    color:#822FAF; 
+    font-weight: 800; 
+    font-size:xx-large;
+}
+
+#map {
+    height: 75vh;
+    width: 100%;
+}
+
+footer {
+    background-color:#822FAF;
+    color: #D9D9D9;
+    text-align:center;
+    padding: 10px;
+}
+
+.button-link {
+    position: absolute;
+    z-index: 99999;
+    top:6rem;
+    left:4rem;
+    padding: 10px 20px;
+    background-color: #C05299; 
+    color: #D9D9D9;
+    text-decoration: none; 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Add some hover effect */
+.button-link:hover {
+    background-color:#822FAF; 
+}

@@ -1,0 +1,95 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 20px;
+    color: #D9D9D9;
+}
+
+.navbar {
+    list-style-type:none;
+    margin: 0%;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.navbar li {
+    display: inline;
+    font-size:large;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: 800;
+    margin-right: 30px;
+}
+
+.navbar a {
+    text-decoration: none; 
+    color: #C05299;
+    transition: color 0.3s; 
+}
+
+.navbar a:hover {
+    color: #C05299; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 2%;
+}
+
+.logoname{
+    margin: 10px;
+    padding:5px;
+    color:#822FAF; 
+    font-weight: 800; 
+    font-size:xx-large;
+}
+
+#map {
+    height:82vh;
+    width: 100%;
+    position: relative;
+}
+
+.formBlock {
+    max-width: 400px;
+    background-color: #FFF;
+    border: 1px solid #ddd;
+    position: absolute;
+    top: 100px;
+    left: 10px;
+    padding: 10px;
+    z-index: 999;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.65);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.leaflet-top .leaflet-control {
+    margin-top: 180px;
+}
+
+.input {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ddd;
+    font-size: 15px;
+    border-radius: 3px;
+}
+
+#form {
+    padding: 0;
+    margin: 0;
+}
+input:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+footer {
+    background-color:#822FAF;
+    color: #D9D9D9;
+    text-align:center;
+    padding: 10px;
+}
