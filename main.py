@@ -51,7 +51,6 @@ def signin():
                 else:
                     flash('User logged in')
                     session['username'] = username
-                    print(session[username],username)
                     return redirect(url_for('dashboard'))
     return render_template('signin.html')
 
@@ -62,7 +61,32 @@ def dashboard():
         return redirect(url_for('index'))
 
     if request.method == 'POST':
-        startPoint = request.form.get('startPoint')
-        endPoint = request.form.get('endPoint')
+        startPoint = request.form.get('source')
+        endPoint = request.form.get('destination')
+        print(startPoint, endPoint)
 
-    return render_template('commute.html')
+        with connection:
+            with connection.cursor() as cr:
+                cr.execute(""" SELECT DISTINCT d1.schedule_id
+                                FROM public.detailedschedule d1
+                                WHERE
+                                EXISTS (
+                                SELECT 1
+                                FROM public.detailedschedule d2
+                                WHERE
+                                d1.schedule_id = d2.schedule_id
+                                AND d1.stop_name = %s -- Replace 'Source' with the actual source stop name
+                                AND d2.stop_name = %s -- Replace 'Destination' with the actual destination stop name
+                                AND d1.stop_number < d2.stop_number);""",(startPoint, endPoint))
+                data = cr.fetchall()
+                print(data)
+                values = [item[0] for item in data]
+                bus = []
+
+                for point in values:
+                    cr.execute("SELECT * FROM public.schedule WHERE scheduleid = %s;", (point,))
+                    bus.append(cr.fetchone())
+
+
+
+    return render_template('commute.html', buses= bus)

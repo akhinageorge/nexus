@@ -55,32 +55,40 @@
                 <button type="submit">Search</button>
             </form>
 
-            <div class="card-section" id="card-section">
-                <!-- Cards will be dynamically added here using JavaScript -->
-            </div>
+
+            <!-- Cards will be dynamically added here using JavaScript -->
         </div>
     </div>
+    </div>
+    <div class="card-section" id="card-section">
+        {% for bus in buses%}
+        <div class="card">
+            <h3>{{bus[1]}}</h3>
+            <p>{{bus[2]}} to {{bus[3]}}</p>
+            <p>Ticket : Rs{{bus[5]}}</p>
+        </div>
+        {% endfor %}
 
-    <script>
-        function updateClock() {
-            const timeElement = document.getElementById('time');
-            const dateElement = document.getElementById('date');
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            const timeString = `${hours}:${minutes}:${seconds}`;
-            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            const dateString = now.toLocaleDateString('en-US', options);
+        <script>
+            function updateClock() {
+                const timeElement = document.getElementById('time');
+                const dateElement = document.getElementById('date');
+                const now = new Date();
+                const hours = now.getHours().toString().padStart(2, '0');
+                const minutes = now.getMinutes().toString().padStart(2, '0');
+                const seconds = now.getSeconds().toString().padStart(2, '0');
+                const timeString = `${hours}:${minutes}:${seconds}`;
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                const dateString = now.toLocaleDateString('en-US', options);
 
-            timeElement.textContent = timeString;
-            dateElement.textContent = dateString;
-        }
+                timeElement.textContent = timeString;
+                dateElement.textContent = dateString;
+            }
 
-        // Update the clock immediately and then every second
-        updateClock();
-        setInterval(updateClock, 1000);
-    </script>
+            // Update the clock immediately and then every second
+            updateClock();
+            setInterval(updateClock, 1000);
+        </script>
 
 </body>
 
