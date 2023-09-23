@@ -71,7 +71,7 @@ function error(err){
                 var marker;
 
                 custom_icon = L.icon({
-                    iconUrl: 'img/red.png',
+                    iconUrl: '../static/assets/red.png',
                     iconSize: [20, 29],
                     iconAnchor: [10, 29],
                     popupAnchor: [0, -29]
@@ -87,7 +87,7 @@ function error(err){
                 var marker;
 
                 custom_icon = L.icon({
-                    iconUrl: 'img/blue.png',
+                    iconUrl: '../static/assets/blue.png',
                     iconSize: [20, 29],
                     iconAnchor: [10, 29],
                     popupAnchor: [0, -29]
