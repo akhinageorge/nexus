@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minimalist Navigation Form</title>
+    <link rel="stylesheet" type="text/css" href="commute.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    
+</head>
+<body>
+    <div class="navbar">
+
+        <div class="logo"> 
+            <img src="image_1-removebg-preview.png" alt="nexus" width="40" height="40">
+            <p class="logoname">nexus</p>
+        </div> 
+
+        <ul class="navbar">
+            <li><a href="#">Next Commute</a></li>
+            <li><a href="#">Flag an Issue</a></li>
+            <li><a href="#">Plan a Journey</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <div class="maincontentcommute">
+        <div class="journeyguy">
+            <img src="Journey-amico.png" alt="journeyguy">
+        </div>
+
+        <div class="dateandtime">
+            <div id="clock">
+                <span id="time"></span>
+            </div>
+            <div id="date"></div>
+        </div>
+
+        <div class="container">
+            <h2>Find your next commute</h2>
+
+            <form class="navigation-form">
+                <div class="form-group">
+                    <label for="source"></label>
+                    <input type="text" id="source" name="source" placeholder="Source" required>
+                    <span class="line"></span>
+                </div>
+                <div class="form-group">
+                    <label for="destination"></label>
+                    <input type="text" id="destination" name="destination" placeholder="Destination" required>
+                    <span class="line"></span>
+                </div>
+                <button type="submit">Search</button>
+            </form>
+
+            <div class="card-section" id="card-section">
+                <!-- Cards will be dynamically added here using JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateClock() {
+            const timeElement = document.getElementById('time');
+            const dateElement = document.getElementById('date');
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+            const dateString = now.toLocaleDateString('en-US', options);
+            
+            timeElement.textContent = timeString;
+            dateElement.textContent = dateString;
+        }
+        
+        // Update the clock immediately and then every second
+    updateClock();
+    setInterval(updateClock, 1000);
+    </script>
+    
+</body>
+
+<footer>
+    <p>&copy; .hack();-2023 Team Nexus. All rights reserved.</p>
+    <p>Contact: teamnexus@gmail.com</p>
+</footer>
+
+</html>
