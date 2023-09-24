@@ -1,43 +1,47 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
-        <link rel="stylesheet" href="../static/style.css">
-        <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'> 
-    </head>
-    <body>
-        <div class="navbar">
 
-            <div class="logo"> 
-                <img src="../static/assets/image_1-removebg-preview.png" alt="nexus" width="40" height="40">
-                <p class="logoname">nexus</p>
-            </div> 
-    
-            <ul class="navbar">
-                <li><a href="#">Next Commute</a></li>
-                <li><a href="#">Flag an Issue</a></li>
-                <li><a href="#">Plan a Journey</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="../static/style.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="navbar">
+
+        <div class="logo">
+            <img src="../static/assets/image_1-removebg-preview.png" alt="nexus" width="40" height="40">
+            <p class="logoname">nexus</p>
         </div>
 
-        <div id='map'></div>
+        <ul class="navbar">
+            <li><a href="#">Next Commute</a></li>
+            <li><a href="#">Flag an Issue</a></li>
+            <li><a href="{{url_for('journey')}}">Plan a Journey</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </div>
 
-        <div class="formBlock">
-            <form id="form">
-                <input type="text" name="start" class="input" id="start" placeholder="Choose starting point" />
-                <input type="text" name="end" class="input" id="destination" placeholder="Choose destination" />
-                <button style="display: none;" type="submit">Get Directions</button>
-            </form>
-        </div>
+    <div id='map'></div>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
-        <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=Rv5I81iMfUlfigjQ4Urb6EHSbFSshjxj"></script>
-        <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=Rv5I81iMfUlfigjQ4Urb6EHSbFSshjxj"></script>
-        <script src="../static/app.js"></script>
+    <div class="formBlock">
+        <form id="form">
+            <input type="text" name="start" class="input" id="start" placeholder="Choose starting point" />
+            <input type="text" name="end" class="input" id="destination" placeholder="Choose destination" />
+            <button style="display: none;" type="submit">Get Directions</button>
+        </form>
+    </div>
 
-    </body>
-    <footer>
-        <p>&copy; .hack();-2023 Team Nexus. All rights reserved.</p>
-        <p>Contact: teamnexus@gmail.com</p>
-    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=Rv5I81iMfUlfigjQ4Urb6EHSbFSshjxj"></script>
+    <script
+        src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=Rv5I81iMfUlfigjQ4Urb6EHSbFSshjxj"></script>
+    <script src="../static/app.js"></script>
+
+</body>
+<footer>
+    <p>&copy; .hack();-2023 Team Nexus. All rights reserved.</p>
+    <p>Contact: teamnexus@gmail.com</p>
+</footer>
+
 </html>

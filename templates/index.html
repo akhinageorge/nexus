@@ -20,9 +20,9 @@
             </div>
 
             <ul class="navbar">
-                <li><a href="{{url_for('dashboard')}}">Next Commute</a></li>
+                <li><a href="{{url_for('signin')}}">Next Commute</a></li>
                 <li><a href="#">Flag an Issue</a></li>
-                <li><a href="#">Plan a Journey</a></li>
+                <li><a href="{{url_for('journey')}}">Plan a Journey</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </div>
@@ -48,18 +48,18 @@
 
             <div class="commute">
                 <img src="../static/assets/Bus driver-bro.png" alt="busimage" width="330px" height="230px">
-                <p class="commutetext"><a href="commute.html">Find your next Commute</a></p>
+                <p class="commutetext"><a href="{{url_for('signin')}}">Find your next Commute</a></p>
             </div>
 
             <div class="flagandjourney">
                 <div class="commute">
                     <img src="../static/assets/Navigation-amico.png" alt="navigation" width="290px" height="331px">
-                    <p class="commutetext"><a href="flagissue.html">Flag an Issue</a></p>
+                    <p class="commutetext"><a href="{{url_for('signin')}}">Flag an Issue</a></p>
                 </div>
 
                 <div class="commute">
                     <img src="../static/assets/Lost-bro.png" alt="lostboy" width="290px" height="331px">
-                    <p class="commutetext"><a href="planjourney.html">Explore a Journey</a></p>
+                    <p class="commutetext"><a href="{{url_for('signin')}}">Explore a Journey</a></p>
                 </div>
             </div>
 

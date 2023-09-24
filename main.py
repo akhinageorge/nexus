@@ -57,6 +57,7 @@ def signin():
 
 @app.route('/dashboard', methods=["POST", "GET"])
 def dashboard():
+    bus = []
     if 'username' not in session:
         return redirect(url_for('index'))
 
@@ -81,7 +82,6 @@ def dashboard():
                 data = cr.fetchall()
                 print(data)
                 values = [item[0] for item in data]
-                bus = []
 
                 for point in values:
                     cr.execute("SELECT * FROM public.schedule WHERE scheduleid = %s;", (point,))
@@ -90,3 +90,11 @@ def dashboard():
 
 
     return render_template('commute.html', buses= bus)
+
+@app.route('/journey')
+def journey():
+    return render_template('journey.html')
+
+@app.route('/route')
+def routes():
+    return render_template('route.html')

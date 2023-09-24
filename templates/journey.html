@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +8,47 @@
 
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-    crossorigin=""/>
+        integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
     <link rel="stylesheet" type="text/css" href="../static/journey.css">
-    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'> 
-    <style>.leaflet-top .leaflet-control {
-        margin-top: 180px;
-    }</style>
+    <link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+    <style>
+        .leaflet-top .leaflet-control {
+            margin-top: 180px;
+        }
+    </style>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
-    crossorigin=""></script>
-   <script src="../static/map.js" defer></script>
+        integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+    <script src="../static/map.js" defer></script>
 
 </head>
+
 <body>
     <div class="navbar">
 
-        <div class="logo"> 
+        <div class="logo">
             <img src="../static/assets/image_1-removebg-preview.png" alt="nexus" width="40" height="40">
             <p class="logoname">nexus</p>
-        </div> 
+        </div>
 
         <ul class="navbar">
             <li><a href="#">Next Commute</a></li>
             <li><a href="#">Flag an Issue</a></li>
-            <li><a href="#">Plan a Journey</a></li>
+            <li><a href="{{url_for('journey')}}">Plan a Journey</a></li>
             <li><a href="#">Contact Us</a></li>
         </ul>
     </div>
 
     <div class="redirectmaps">
-        <a class="button-link" href="../templates/Route.html">Go to Navigation</a>
+        <a class="button-link" href="{{url_for('routes')}}">Go to Navigation</a>
     </div>
 
     <div id="map"></div>
-    <div class="formBlockmap">    
-    
+    <div class="formBlockmap">
+
 </body>
 <footer>
     <p>&copy; .hack();-2023 Team Nexus. All rights reserved.</p>
     <p>Contact: teamnexus@gmail.com</p>
 </footer>
+
 </html>
